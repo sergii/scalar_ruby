@@ -2,48 +2,50 @@
 
 require 'test_helper'
 
-class Scalar::TestConfig < Minitest::Test
-  def setup
-    Scalar::Config.instance.set_defaults!
+module Scalar
+  class TestConfig < Minitest::Test
+    def setup
+      Scalar::Config.instance.set_defaults!
 
-    @instance = Scalar::Config.instance
-  end
+      @instance = Scalar::Config.instance
+    end
 
-  def test_that_configuration_accessor_is_available
-    assert_equal(Scalar::Config::DEFAULT_CONFIGURATION, @instance.configuration)
+    def test_that_configuration_accessor_is_available
+      assert_equal(Scalar::Config::DEFAULT_CONFIGURATION, @instance.configuration)
 
-    @instance.configuration = { theme: 'purple' }
+      @instance.configuration = { theme: 'purple' }
 
-    assert_equal({ theme: 'purple' }, @instance.configuration)
-  end
+      assert_equal({ theme: 'purple' }, @instance.configuration)
+    end
 
-  def test_that_library_url_accessor_is_available
-    assert_equal(Scalar::Config::DEFAULT_LIBRARY_URL, @instance.library_url)
+    def test_that_library_url_accessor_is_available
+      assert_equal(Scalar::Config::DEFAULT_LIBRARY_URL, @instance.library_url)
 
-    @instance.library_url = 'https://scalar.io/latest'
+      @instance.library_url = 'https://scalar.io/latest'
 
-    assert_equal('https://scalar.io/latest', @instance.library_url)
-  end
+      assert_equal('https://scalar.io/latest', @instance.library_url)
+    end
 
-  def test_that_page_title_accessor_is_available
-    assert_equal(Scalar::Config::DEFAULT_PAGE_TITLE, @instance.page_title)
+    def test_that_page_title_accessor_is_available
+      assert_equal(Scalar::Config::DEFAULT_PAGE_TITLE, @instance.page_title)
 
-    @instance.page_title = 'API Documentation'
+      @instance.page_title = 'API Documentation'
 
-    assert_equal('API Documentation', @instance.page_title)
-  end
+      assert_equal('API Documentation', @instance.page_title)
+    end
 
-  def test_that_specification_accessor_is_available
-    assert_equal(Scalar::Config::DEFAULT_SPECIFICATION, @instance.specification)
+    def test_that_specification_accessor_is_available
+      assert_equal(Scalar::Config::DEFAULT_SPECIFICATION, @instance.specification)
 
-    @instance.specification = 'https://scalar.io/api/reference'
+      @instance.specification = 'https://scalar.io/api/reference'
 
-    assert_equal('https://scalar.io/api/reference', @instance.specification)
-  end
+      assert_equal('https://scalar.io/api/reference', @instance.specification)
+    end
 
-  def test_configuration_to_json_returns_serialized_configuration
-    @instance.configuration = { theme: 'purple' }
+    def test_configuration_to_json_returns_serialized_configuration
+      @instance.configuration = { theme: 'purple' }
 
-    assert_equal('{"theme":"purple"}', @instance.configuration_to_json)
+      assert_equal('{"theme":"purple"}', @instance.configuration_to_json)
+    end
   end
 end

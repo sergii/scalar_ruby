@@ -13,6 +13,7 @@ Gem::Specification.new do |spec|
   spec.license = 'MIT'
 
   spec.metadata['homepage_uri'] = spec.homepage
+  spec.metadata['rubygems_mfa_required'] = 'true'
   spec.metadata['source_code_uri'] = spec.homepage
 
   spec.files = Dir['{lib}/**/*', 'Rakefile', 'README.md']

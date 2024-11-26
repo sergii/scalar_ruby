@@ -21,14 +21,16 @@ module Scalar
     DEFAULT_PAGE_TITLE = 'API Reference'
     DEFAULT_LIBRARY_URL = 'https://cdn.jsdelivr.net/npm/@scalar/api-reference'
 
-    DEFAULT_SPECIFICATION = JSON.dump({
-      "openapi": "3.1.0",
-      "info": {
-        "title": "Scalar API Reference",
-        "description": SPECIFICATION_DESCRIPTION,
-        "version": "1.0.0"
+    DEFAULT_SPECIFICATION = JSON.dump(
+      {
+        openapi: '3.1.0',
+        info: {
+          title: 'Scalar API Reference',
+          description: SPECIFICATION_DESCRIPTION,
+          version: '1.0.0'
+        }
       }
-    })
+    )
 
     attr_accessor :configuration,
                   :library_url,

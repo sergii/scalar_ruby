@@ -1,0 +1,15 @@
+require:
+  - rubocop-minitest
+  - rubocop-performance
+
+AllCops:
+  NewCops: enable
+  SuggestExtensions: false
+
+Metrics/MethodLength:
+  Exclude:
+    - 'test/test_scalar.rb'
+    - 'test/scalar/**/*'
+
+Style/Documentation:
+  Enabled: false

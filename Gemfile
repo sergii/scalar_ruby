@@ -8,3 +8,7 @@ gemspec
 
 gem 'minitest'
 gem 'rake'
+
+gem 'rubocop', '~> 1.68'
+gem 'rubocop-minitest', '~> 0.36.0'
+gem 'rubocop-performance', '~> 1.23'
