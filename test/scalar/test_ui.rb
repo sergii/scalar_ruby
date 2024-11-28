@@ -37,10 +37,7 @@ module Scalar
           '      id="api-reference"',
           '      data-configuration={}',
           '    >',
-          '      {"openapi":"3.1.0","info":{"title":"Scalar API Reference","description":"Add your OpenAPI ' \
-          'specification to leverage the full power of Scalar!\n\n## Resources\n\n* ' \
-          'https://github.com/scalar/scalar\n* https://github.com/OAI/OpenAPI-Specification\n* ' \
-          'https://scalar.com\n","version":"1.0.0"}}',
+          '      https://cdn.jsdelivr.net/npm/@scalar/galaxy/dist/latest.yaml',
           '    </script>',
           '',
           '    <script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference"></script>',
