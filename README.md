@@ -1,6 +1,6 @@
 # Scalar API Reference for Ruby
 
-This gem simplifies the integration of [Scalar](https://scalar.com) into Ruby applications.
+This gem simplifies the integration of [Scalar](https://scalar.com), a modern open-source developer experience platform for your APIs into Ruby applications.
 
 ## Installation
 
@@ -16,7 +16,7 @@ Here are links to guidelines on how to set up the library for your Ruby applicat
 
 - [Setup for Ruby on Rails](https://github.com/dmytroshevchuk/scalar_ruby/wiki/Setup-for-Ruby-on-Rails)
 
-Please feel free to create a pull request and add a guideline for the framework that is not currently covered.
+Please feel free to [create a pull request](https://github.com/dmytroshevchuk/scalar_ruby/fork) and add a guideline for the framework that is not currently covered.
 
 ## Configuration
 
