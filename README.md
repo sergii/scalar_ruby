@@ -4,7 +4,7 @@ This gem simplifies the integration of [Scalar](https://scalar.com), a modern op
 
 ## Installation
 
-Add the gem to your application's Gemfile by executing:
+Add the gem to your application's Gemfile by executing in the terminal:
 
 ```
 bundle add scalar_ruby
@@ -24,57 +24,44 @@ Once mounted to your application, the library requires no further configuration.
 
 Having default configurations set may be an excellent way to validate whether the Scalar fits your project. However, most users would love to utilize their specifications and be able to alter settings.
 
-The default configuration can be changed using the `Scalar.setup` method.
+The default configuration can be changed using the `Scalar.setup` method in `config/initializers/scalar.rb`.
 
-```
+```ruby
+# config/initializers/scalar.rb
+
 Scalar.setup do |config|
- config.page_title = 'Hello, World!'
+ config.page_title = 'My awesome API!'
 end
 ```
 
 Below, you’ll find a complete list of configuration settings:
 
-- ### library_url
+Parameter                                  | Description                                             | Default
+-------------------------------------------|---------------------------------------------------------|------------------------
+`config.page_title`                        | Defines the page title displayed in the browser tab.    | API Reference
+`config.library_url`                       | Allows to set a specific version of Scalar. By default, it uses the latest version of Scalar, so users get the latest updates and bug fixes.   | https://cdn.jsdelivr.net/npm/@scalar/api-reference
+`config.scalar_configuration`              | Scalar has a rich set of configuration options if you want to change how it works and looks. A complete list of configuration options can be found [here](https://github.com/scalar/scalar/blob/main/documentation/configuration.md).   | {}
+`config.specification`                     | Allows users to pass their OpenAPI specification to Scalar. It can be a URL to specification or a string object in JSON or YAML format.    | https://cdn.jsdelivr.net/npm/@scalar/galaxy/dist/latest.yaml
 
-**Default:** `https://cdn.jsdelivr.net/npm/@scalar/api-reference`
+Example of setting configuration options:
 
-By default, the library uses the latest version of Scalar, so users get the latest updates and bug fixes. This setting allows you to set a specific version of Scalar.
+```ruby
+# config/initializers/scalar.rb
 
-- ### page_title
-
-**Default:** `API Reference`
-
-It defines the page title displayed in the browser tab.
-
-- ### scalar_configuration
-
-**Default:** `{}`
-
-Scalar has a rich set of configuration options if you want to change how it works and looks.
-
-```
 Scalar.setup do |config|
  config.scalar_configuration = { theme: 'purple' }
 end
 ```
 
-A complete list of configuration options can be found [here](https://github.com/scalar/scalar/blob/main/documentation/configuration.md)
-
-- ### specification
-
-**Default:** `https://cdn.jsdelivr.net/npm/@scalar/galaxy/dist/latest.yaml`
-
-It allows users to pass their own OpenAPI specification to Scalar. It can be a URL to specification or a string object in JSON or YAML format.
-
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
-Run ' bundle exec rake install ' to install this gem onto your local machine. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+Run `bundle exec rake install` to install this gem onto your local machine. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/scalar-ruby. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/scalar-ruby/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/dmytroshevchuk/scalar-ruby. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/dmytroshevchuk/scalar-ruby/blob/master/CODE_OF_CONDUCT.md).
 
 ## License
 
@@ -82,4 +69,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the Scalar::Ruby project’s codebases, issue trackers, chat rooms, and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/scalar-ruby/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Scalar::Ruby project’s codebases, issue trackers, chat rooms, and mailing lists is expected to follow the [code of conduct](https://github.com/dmytroshevchuk/scalar-ruby/blob/master/CODE_OF_CONDUCT.md).
