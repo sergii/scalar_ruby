@@ -6,7 +6,7 @@ This gem simplifies the integration of [Scalar](https://scalar.com), a modern op
 
 Add the gem to your application's Gemfile by executing in the terminal:
 
-```
+```bash
 bundle add scalar_ruby
 ```
 
