@@ -17,6 +17,8 @@ Statistically, you will likely use the gem for the Ruby on Rails application, so
 Once you have installed the gem, go to `config/routes.rb` and mount the `Scalar::UI` to your application.
 
 ```ruby
+# config/routes.rb
+
 Rails.application.routes.draw do
   mount Scalar::UI, at: '/docs'
   ...
@@ -30,6 +32,8 @@ Then, if you want to use your OpenAPI specification, you need to re-configure th
 First, create an initializer, say `config/initializers/scalar.rb`. Then, set the desired specification as `config.specification` using the `Scalar.setup` method:
 
 ```ruby
+# config/initializers/scalar.rb
+
 Scalar.setup do |config|
   config.specification = File.read(Rails.root.join('docs/openapi.yml'))
 end
@@ -38,6 +42,8 @@ end
 Also, you can pass a URL to the specification:
 
 ```ruby
+# config/initializers/scalar.rb
+
 Scalar.setup do |config|
   config.specification = "#{ActionMailer::Base.default_url_options[:host]/openapi.json}"
 end
