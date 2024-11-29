@@ -1,3 +1,6 @@
+[![Gem Version](https://badge.fury.io/rb/scalar_ruby.svg)](https://badge.fury.io/rb/scalar_ruby)
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/dmytroshevchuk/scalar_ruby/check.yml)](https://github.com/dmytroshevchuk/scalar_ruby/actions/workflows/check.yml)
+
 # Scalar API Reference for Ruby
 
 This gem simplifies the integration of [Scalar](https://scalar.com), a modern open-source developer experience platform for your APIs into Ruby applications.
