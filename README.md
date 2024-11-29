@@ -12,11 +12,38 @@ bundle add scalar_ruby
 
 ## Getting Started
 
-Here are links to guidelines on how to set up the library for your Ruby application.
+Statistically, you will likely use the gem for the Ruby on Rails application, so here are instructions on how to set up the Scalar for this framework. In the future, we'll add examples for other popular Ruby frameworks.
 
-- [Setup for Ruby on Rails](https://github.com/dmytroshevchuk/scalar_ruby/wiki/Setup-for-Ruby-on-Rails)
+Once you have installed the gem, go to `config/routes.rb` and mount the `Scalar::UI` to your application.
 
-Please feel free to [create a pull request](https://github.com/dmytroshevchuk/scalar_ruby/fork) and add a guideline for the framework that is not currently covered.
+```ruby
+Rails.application.routes.draw do
+  mount Scalar::UI, at: '/docs'
+  ...
+end
+```
+
+Restart the Rails server, and hit `localhost:3000/docs`. You'll see the default view of the Scalar API reference. It uses the `@scalar/galaxy` OpenAPI reference so that you will have something to play with immediately.
+
+Then, if you want to use your OpenAPI specification, you need to re-configure the Scalar.
+
+First, create an initializer, say `config/initializers/scalar.rb`. Then, set the desired specification as `config.specification` using the `Scalar.setup` method:
+
+```ruby
+Scalar.setup do |config|
+  config.specification = File.read(Rails.root.join('docs/openapi.yml'))
+end
+```
+
+Also, you can pass a URL to the specification:
+
+```ruby
+Scalar.setup do |config|
+  config.specification = "#{ActionMailer::Base.default_url_options[:host]/openapi.json}"
+end
+```
+
+And that's it! More detailed information on other configuration options is in the section below.
 
 ## Configuration
 
