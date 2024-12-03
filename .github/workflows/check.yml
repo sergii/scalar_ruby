@@ -24,7 +24,7 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
 
-      - name: Install Ruby dependencies
+      - name: Install Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: ${{ matrix.ruby }}
@@ -36,8 +36,8 @@ jobs:
           echo "Ruby version: $(ruby -v)"
           echo "Bundler version: $(bundle -v)"
 
-      - name: Ensure required gems are installed
-        run: bundle install
+      - name: Install dependencies
+        run: bundle install --jobs 4 --retry 3
 
       - name: Run CI pipeline for the gem
         run: bin/check
