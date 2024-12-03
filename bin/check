@@ -3,11 +3,9 @@
 set -e  # Exit immediately if a command exits with a non-zero status
 set -o pipefail  # Fail if any part of a pipeline fails
 
-echo "🚧 [ bin/check ] Running CI pipeline for the gem..."
-
 # Run Brakeman (static analysis for security vulnerabilities in Rails apps)
 echo "🔍 [ bin/check ] Analyzing code for security vulnerabilities..."
-brakeman --force || { echo "❌ [ bin/check ] Brakeman failed"; exit 1; }
+bundle exec brakeman --force || { echo "❌ [ bin/check ] Brakeman failed"; exit 1; }
 
 # Run bundle audit (checks for vulnerabilities in gem dependencies)
 echo "🔍 [ bin/check ] Analyzing Ruby gems for security vulnerabilities..."
