@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 namespace :scalar do
-  desc "Install Scalar for a specific framework"
+  desc 'Install Scalar for a specific framework'
   task :install, [:framework] do |_t, args|
     framework = args[:framework]&.downcase
     case framework

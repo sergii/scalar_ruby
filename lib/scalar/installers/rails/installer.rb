@@ -2,9 +2,11 @@
 
 module Scalar
   module Installers
-    class Rails::Installer
-      def self.install
-        system('bin/rails generate scalar:rails')
+    module Rails
+      class Installer
+        def self.install
+          system('bin/rails generate scalar:rails')
+        end
       end
     end
   end
