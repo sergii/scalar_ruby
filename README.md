@@ -15,6 +15,11 @@ bundle add scalar_ruby
 
 ## Getting Started
 
+#### Integrations
+- [x] [Ruby on Rails]https://rubyonrails.org)
+
+[Setup with Rails framework](lib/scalar/installers/rails/README.md)
+
 Statistically, you will likely use the gem for the Ruby on Rails application, so here are instructions on how to set up the Scalar for this framework. In the future, we'll add examples for other popular Ruby frameworks.
 
 Once you have installed the gem, go to `config/routes.rb` and mount the `Scalar::UI` to your application.
