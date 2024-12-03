@@ -22,11 +22,26 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
 
-      - name: Install dependencies
+      - name: Install Ruby dependencies
         uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
           ruby-version: ${{ matrix.ruby }}
 
-      - name: Running CI pipeline for the gem...
+      - name: Debug Environment
+        run: |
+          echo "Ruby version: $(ruby -v)"
+          echo "Bundler version: $(bundle -v)"
+
+      - name: Ensure required gems are installed
+        run: bundle install
+
+      - name: Run CI pipeline for the gem
         run: bin/check
+
+      - name: Collect Brakeman warnings (Optional)
+        if: always()
+        run: |
+          mkdir -p reports
+          bin/check > reports/brakeman.log || true
+        continue-on-error: true
