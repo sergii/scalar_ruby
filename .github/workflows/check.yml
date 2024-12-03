@@ -37,7 +37,7 @@ jobs:
           echo "Bundler version: $(bundle -v)"
 
       - name: Install dependencies
-        run: bundle install --jobs 4 --retry 3
+        run: bundle install
 
       - name: Run CI pipeline for the gem
         run: bin/check
