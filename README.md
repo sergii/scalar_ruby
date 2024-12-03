@@ -5,6 +5,14 @@
 
 This gem simplifies the integration of [Scalar](https://scalar.com), a modern open-source developer experience platform for your APIs into Ruby applications.
 
+## Requirements
+
+This gem is tested and supported on the following Ruby versions:
+
+- Ruby 3.0, 3.1, 3.2, 3.3
+
+Other Ruby versions might work but are not officially supported.
+
 ## Installation
 
 Add the gem to your application's Gemfile by executing in the terminal:
