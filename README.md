@@ -24,9 +24,9 @@ bundle add scalar_ruby
 ## Getting Started
 
 #### Integrations
-- [x] [Ruby on Rails]https://rubyonrails.org)
+You can use in-build generator to setup gem into [Ruby in Rails](https://rubyonrails.org) framework followed by instructions:
 
-[Setup with Rails framework](lib/scalar/installers/rails/README.md)
+Setup gem with [Ruby on Rails](lib/scalar/installers/rails/README.md)
 
 Statistically, you will likely use the gem for the Ruby on Rails application, so here are instructions on how to set up the Scalar for this framework. In the future, we'll add examples for other popular Ruby frameworks.
 

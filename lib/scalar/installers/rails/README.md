@@ -1,7 +1,3 @@
----
-title: Getting started with Rails
----
-
 # Getting started with Scalar on Rails
 
 While Scalar can be used in any Ruby project, it’s especially great with [Ruby on Rails](https://rubyonrails.org).
