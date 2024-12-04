@@ -4,7 +4,7 @@ title: Getting started with Rails
 
 # Getting started with Scalar on Rails
 
-While Scalar can be used in any Ruby project, it’s especially great with [Rails](https://rubyonrails.org).
+While Scalar can be used in any Ruby project, it’s especially great with [Ruby on Rails](https://rubyonrails.org).
 
 ## Setup
 
@@ -22,5 +22,5 @@ bin/rails generate scalar:install
 
 This script will:
 
-1. update `config/routes.rb` to mount `/docs` route.
-2. generate `config/initializers/scalar.rb`
+1. Update `config/routes.rb` to mount `/docs` route.
+2. Generate `config/initializers/scalar.rb`
