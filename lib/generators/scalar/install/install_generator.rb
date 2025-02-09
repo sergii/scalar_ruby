@@ -28,7 +28,7 @@ module Scalar
       def farewell
         say <<~FAREWELL
 
-          We're done!  Your can run "/docs" to observe a scalar API platform
+          We're done! Your can run "/docs" to observe a scalar API platform
 
         FAREWELL
       end
