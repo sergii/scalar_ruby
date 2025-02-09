@@ -9,8 +9,8 @@ gem 'minitest'
 gem 'rake'
 
 group :development do
-  gem 'bundler-audit', '~> 0.9.2', require: false
-  gem 'rubocop', '~> 1.68'
-  gem 'rubocop-minitest', '~> 0.36.0'
-  gem 'rubocop-performance', '~> 1.23'
+  gem 'bundler-audit', require: false
+  gem 'rubocop'
+  gem 'rubocop-minitest'
+  gem 'rubocop-performance'
 end
